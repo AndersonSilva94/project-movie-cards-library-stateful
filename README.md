@@ -39,9 +39,9 @@ Desenvolver uma aplicação que consiste em uma biblioteca de cartões de filmes
   * Instale as dependências:
     * `npm install`
   * Inicialize o projeto:
-    * `npm start` (uma nova página deve abrir no seu navegador com um texto simples)
-  * Verifique que os testes estão executando:
-    * `npm test` (os testes devem rodar e falhar)
+    * `npm start` (uma nova página deve abrir no seu navegador com o projeto)
+  * Você pode verificar que os testes estão executando:
+    * `npm test`
 
 ## Requisitos
 
