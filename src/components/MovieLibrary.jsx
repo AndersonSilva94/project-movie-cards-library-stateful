@@ -38,7 +38,6 @@ class MovieLibrary extends Component {
     });
   }
 
-  // Requisitos 18 e 19 feitos com ajuda de Maria Luiza Rodrigues - Turma 10 - Tribo A
   filterFavorites = (arr) => {
     const { bookmarkedOnly } = this.state;
     return arr.filter(({ bookmarked }) => bookmarked === bookmarkedOnly);
