@@ -36,7 +36,7 @@ input[type=checkbox] {
   text-align: center;
 }
 
-.searchbar-area {
+.searchbar-area, .add-movie-area {
   padding: 20px;
   background-color: whitesmoke;
   border: 1px solid grey;
@@ -52,6 +52,45 @@ input[type=checkbox] {
 
 .searchbar-area label:nth-of-type(2) {
   align-self: center;
+}
+
+.add-movie-area form {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.add-movie-area form div {
+  width: 40%;
+}
+
+.add-movie-area form div:nth-of-type(1) input {
+  padding: 10px 0;
+}
+
+.add-movie-area form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:center;
+}
+
+.add-movie-area form textarea {
+  flex-grow: 1;
+}
+
+.add-movie-area button {
+  background-color: rgb(211, 26, 26);
+  border: 1px solid rgb(211, 26, 26);
+  border-radius: 5px;
+  color: whitesmoke;
+  margin-top: 20px;
+  padding: 5px 0;
+  width: 100%;
+}
+.add-movie-area button:hover {
+  background-color: whitesmoke;
+  color: rgb(211, 26, 26);
 }
 
 .movie-list {
