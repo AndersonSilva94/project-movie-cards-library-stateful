@@ -159,3 +159,13 @@ input[type=checkbox] {
   justify-content: flex-end;
   padding: 12px 20px;
 }
+
+@media (max-width: 600px) {
+  .add-movie-area form {
+    flex-direction: column;
+  }
+
+  .add-movie-area form div {
+    width: 100%;
+  }
+}
