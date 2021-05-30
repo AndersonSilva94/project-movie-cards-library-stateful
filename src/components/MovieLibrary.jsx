@@ -54,6 +54,12 @@ class MovieLibrary extends Component {
       || subtitle.includes(searchText) || storyline.includes(searchText));
   }
 
+  addNewMovie = (newMovie) => {
+    this.setState((prevState) => ({
+      moviesList: [...prevState.moviesList, newMovie],
+    }));
+  }
+
   render() {
     const { searchText, bookmarkedOnly, selectedGenre } = this.state;
     let { moviesList } = this.state;
@@ -62,7 +68,7 @@ class MovieLibrary extends Component {
     if (searchText) moviesList = this.filterText(moviesList);
     return (
       <div>
-        <h2> My awesome movie library </h2>
+        <h2 className="title-movie-library"> My awesome movie library </h2>
         <SearchBar
           searchText={ searchText }
           onSearchTextChange={ this.textChange }
@@ -72,7 +78,7 @@ class MovieLibrary extends Component {
           onSelectedGenreChange={ this.genreChange }
         />
         <MovieList movies={ moviesList } />
-        <AddMovie />
+        <AddMovie onClick={ this.addNewMovie } />
       </div>
     );
   }

@@ -1,12 +1,29 @@
 body {
-  background-color: whitesmoke;
+  background-color: #343a40;
   box-sizing: border-box;
   font-size: 16px;
 }
 
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input[type=text], input[type=number], textarea, select {
+  padding: 5px;
+  border: 0.3px solid grey;
+  border-radius: 5px;
+  outline: 0;
+  width: 100%
+}
+
+input[type=checkbox] {
+  margin-left: 10px;
+}
+
 .movie-card-header {
   align-items: center;
-  background-color: #343a40;
+  background-color: rgb(211, 26, 26);
   display: flex;
   height: 100px;
   justify-content: center;
@@ -15,8 +32,65 @@ body {
 .page-title {
   color: #f8f9fa;
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
+}
+
+.searchbar-area, .add-movie-area {
+  padding: 20px;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 20px auto;
+}
+.searchbar-area {
+  justify-content: space-around;
+}
+
+.searchbar-area label:nth-of-type(2) {
+  align-self: center;
+}
+
+.add-movie-area form {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.add-movie-area form div {
+  width: 40%;
+}
+
+.add-movie-area form div:nth-of-type(1) input {
+  padding: 10px 0;
+}
+
+.add-movie-area form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:center;
+}
+
+.add-movie-area form textarea {
+  flex-grow: 1;
+}
+
+.add-movie-area button {
+  background-color: rgb(211, 26, 26);
+  border: 1px solid rgb(211, 26, 26);
+  border-radius: 5px;
+  color: whitesmoke;
+  margin-top: 20px;
+  padding: 5px 0;
+  width: 100%;
+}
+.add-movie-area button:hover {
+  background-color: whitesmoke;
+  color: rgb(211, 26, 26);
 }
 
 .movie-list {
@@ -35,8 +109,12 @@ body {
   margin: 5px;
   overflow: hidden;
   width: 300px;
+  transition: 0.3s;
 }
 
+.movie-card:hover {
+  transform: scale(1.2);
+}
 
 .movie-card-image {
   width: 100%;
@@ -80,4 +158,14 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 12px 20px;
+}
+
+@media (max-width: 600px) {
+  .add-movie-area form {
+    flex-direction: column;
+  }
+
+  .add-movie-area form div {
+    width: 100%;
+  }
 }
