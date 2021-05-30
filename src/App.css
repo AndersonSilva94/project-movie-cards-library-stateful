@@ -36,6 +36,24 @@ input[type=checkbox] {
   text-align: center;
 }
 
+.searchbar-area {
+  padding: 20px;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 20px auto;
+}
+.searchbar-area {
+  justify-content: space-around;
+}
+
+.searchbar-area label:nth-of-type(2) {
+  align-self: center;
+}
+
 .movie-list {
   display: flex;
   flex-flow: row wrap;
